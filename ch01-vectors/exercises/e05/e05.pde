@@ -38,8 +38,8 @@ class Car {
   }
   
   void _calcAcceleration() {
-    // .125 to avoid floating point errors
     if (keyPressed && keyCode == UP) {
+      // 0.125 to avoid floating point approximations
       acceleration = new PVector(0.125,0);
     } else if (keyPressed && keyCode == DOWN) {
       acceleration = new PVector(0,0);
